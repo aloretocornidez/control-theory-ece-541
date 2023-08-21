@@ -5,10 +5,12 @@
 - Email: aloretocornidez@arizona.edu
 
 ## Photograph
-
+![[Pasted image 20230821154423.png]]
 ## Interesting Fact
-I play guitar, do photography, martial arts (MMA), and enjoy working on cars.
+I play guitar, do photography, martial arts (MMA, Muay Thai, Brazillian Jiu Jitsu), and enjoy working on cars.
 
+
+<!--
 ## Learning Strategies
 - What is Metacognition?
     - The ability to think about your own thinking
@@ -19,5 +21,6 @@ I play guitar, do photography, martial arts (MMA), and enjoy working on cars.
 - What is Bloom's in Layman's terms?
     - (Retrieved from book, page 23) Bloom's is a description of the hierarchy of learning levels. It ascends from very shallow to very deep learning. From rote memorization to the highest levels of understanding and applications.
 
+-->
 
 
