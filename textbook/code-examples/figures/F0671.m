@@ -1,0 +1,11 @@
+load f0671;
+axis([-6 3 -6 6]);
+plot([-100 pole(3)],[0 0],'-',pole([2 1]),[0 0],'-'); grid;
+axis([-6 3 -6 6]);
+title('FIGURE 6.71 COMPUTER PROGRAM GENERATED ROOT LOCUS PLOT FOR FIGURE 6.57');
+xlabel('REAL (S)'); ylabel('IMAGINARY (S)');
+hold on;
+plot(real(pole),imag(pole),'x');
+plot(real(root),imag(root),'o');
+plot(r,'-'); plot(conj(r),'-');
+hold off;

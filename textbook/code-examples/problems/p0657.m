@@ -1,0 +1,15 @@
+num = [1 6];
+den = [conv([1 1],[1 4]) 0];
+[kmax,smax] = rootangl(num,den,90);
+ii = find(kmax < 100); kmax = kmax(ii); smax = smax(ii);
+[kbreak,sbreak] = rlpoba(num,den);
+r = rlocus(num,den,sort([0 kbreak' kmax' logspace(0,2) 1e5]));
+axis([-7 2 -8 8]); plot(r,'-'); grid; axis([-7 2 -8 8]);
+xlabel('Real'); ylabel('Imaginary');
+hold on; plot(roots(num)+eps*sqrt(-1),'o'); hold off;
+hold on; plot(roots(den)+eps*sqrt(-1),'x'); hold off;
+hold on; plot([smax conj(smax)],'*'); hold off;
+text(0,imag(smax),[' Kmax = ' num2str(kmax)]);
+text(0,-imag(smax),[' Smax = ' num2str(-imag(smax)) 'j']);
+hold on; plot(sbreak,0,'*'); hold off;
+text(sbreak,0,[' Kbreak = ' num2str(kbreak)]);

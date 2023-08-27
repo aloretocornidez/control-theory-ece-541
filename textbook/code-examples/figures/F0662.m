@@ -1,0 +1,12 @@
+num = [1 4];
+den = conv(conv([1 0.5],[1 0.5]),[1 2]);
+[kbreak,sbreak] = rlpoba(num,den);
+[kmax,smax] = rootangl(num,den,90); kmax = kmax(2); smax = smax(2);
+r = rlocus(num,den,sort([0 kbreak' kmax' logspace(-1,2) 1e4]));
+axis([-5 1 -5 5]); plot(r,'-'); grid; axis([-5 1 -5 5]);
+xlabel('REAL'); ylabel('IMAGINARY');
+hold on; plot([smax conj(smax)],'*'); hold off;
+text(real(smax),imag(smax),[' Kmax = ' num2str(kmax)]);
+text(real(smax),-imag(smax),['S = ' num2str(-imag(smax)) 'j']);
+hold on; plot(roots(num)+sqrt(-1)*eps,'o'); hold off;
+hold on; plot(roots(den)+sqrt(-1)*eps,'x'); hold off;

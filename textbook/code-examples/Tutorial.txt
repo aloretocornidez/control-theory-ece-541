@@ -1,0 +1,900 @@
+	Tutorial
+
+A Bridge Between Modern Control System Theory And Design, Second Edition, And 
+MATLAB
+
+1.  Introduction
+
+	This tutorial was created to assist engineering students and practicing that have come to the cross-roads 
+where computer software would assist them immeasurably in understanding and accomplishing their 
+engineering tasks.  Almost all universities realize this need, but there is no agreed upon software package that 
+is "correct" (save maybe FORTRAN). The computer can be extremely helpful, even at a very early stage of the 
+learning process, but should not be substituted for the understanding of the topics.
+
+	MATLAB, an abbreviation for MATrix LABoratory, is a matrix-based system used for engineering 
+calculations which has progressed to become the language used by most control system engineers worldwide.  
+This tutorial focuses attention on the required background needed for designing control systems with 
+MATLAB.  MATLAB is a very useful language which operates interactively with the user, and will respond to 
+all of the user's attempts at conversation.  It offers a variety of graphic output displays useful to control system 
+engineers such as system block diagram development (Simulink required), linear, log, semilog, polar and 
+contour plots.  It is envisioned that this document will serve as a supplement to either Modern Control System 
+Theory and Design or Advanced Modern Control System Theory and Design, and enable students, professors, 
+and practicing engineers to quickly learn the basics needed to use MATLAB with its associated toolboxes and 
+the Modern Control System Theory and Design Toolbox.
+
+	This integrated textbook and software learning package is self contained, and is designed for 
+undergraduate courses on control systems. In addition, a Solutions Manual is available to professors who 
+adopt this book.  This toolbox (software) contains extensive new features/utilities created to enhance 
+MATLAB and several of The MathWorks' toolboxes.  Since this integrated learning package and the 
+MATLAB software is self contained, it is not necessary to purchase additional books/material to learn how to 
+use MATLAB with this textbook.
+
+	The software contained on the MODERN CONTROL SYSTEM THEORY AND DESIGN 
+TOOLBOX contains the following features that makes this book self-contained for use with MATLAB: 
+
+ò	A Tutorial File (this document) has been added that contains the essentials necessary to understand 
+and effectively utilize the MATLAB interface.  This tutorial file aids the user in understanding the 
+MATLAB interface where most other books require additional books for full comprehension.  Features 
+of this file are as follows:
+
+		m	MATLAB installation assistance
+		m	MATLAB performance improvement suggestions
+		m	MATLAB fundamentals
+		m	Understanding notations used by MATLAB
+		m	Control analysis using MATLAB
+		m	MODERN CONTROL SYSTEM THEORY AND DESIGN TOOLBOX use with 
+MATLAB
+
+1.  Introduction (continued)
+
+ò	A Demonstration m-file gives the users a feel for the various utilities included in the MODERN 
+CONTROL SYSTEM THEORY AND DESIGN TOOLBOX.  Included are the following:
+
+		m	General purpose utilities
+		m	Linear, frequency domain, Bode Diagram
+		m	Linear, frequency domain, Nichols Chart
+		m	Linear, frequency domain, Root Locus
+		m	Nonlinear, frequency domain, Describing function
+		m	Linear, time domain
+		m	Conversions between discrete time domain and continuous time systems
+
+	This demonstration helps the user learn how to use the MATLAB package easily with the MODERN 
+CONTROL SYSTEM THEORY AND DESIGN TOOLBOX, and with the tutorial makes this 
+integrated package self contained.
+
+ò	Online HELP is available for all MODERN CONTROL SYSTEM THEORY AND DESIGN 
+TOOLBOX utilities.  Additionally, the "lookfor" command (available from MATLAB version 4.0 
+onward) is fully supported in the online help for each MODERN CONTROL SYSTEM THEORY 
+AND DESIGN TOOLBOX utility.
+
+ò	A Synopsis File reviews and highlights the features of each chapter in MODERN CONTROL 
+SYSTEM THEORY AND DESIGN in a concise manner which is helpful in guiding the professor on 
+subjects to emphasize, and to the student and practicing engineer for reviewing and remembering 
+important aspects of the coverage.
+
+ò	The software is compatible with all editions of The Student Edition of MATLAB and the 
+Professional Versions of MATLAB (starting with Versions 3.5 or 4.0, respectively), and it has been 
+upgraded to be compatible with The MathWorks' following software packages:
+
+		m	Control System Toolbox Version 2.0 or greater
+		m	Simulink Version 1.2c
+		m	Nonlinear Toolbox Version 1.0
+		m	Symbolic Toolbox Version 1.0
+
+	I have attempted to make this document an easy reading document (light hearted J at times) for the 
+individuals about to learn/use MATLAB as part of their engineering background.  Some may find this a little 
+too simple L, but no-one should be unable to follow the natural progression of this document.  Most of this 
+document can even be read with little or no hands-on practice while getting a full grasp of most of the 
+MATLAB capabilities (although not suggested).
+
+2.  First Time Usage - Software For Engineering
+
+	This section deals with the software.  It does assume that you already have an understanding of the 
+theoretical principals of the topics about to be presented.  Any software that you may use now, or any time in 
+the future, is only as good as your comprehension of the topics, and your ability to interpret the results 
+presented to you by the computer.  This cannot be stressed enough, because misinterpreted results due to 
+whatever cause (incorrect inputs, computer round-offs, misinterpreted printouts, faulty programming code, etc.) 
+can lead to any number of Catastrophes, depending on what you are doing.  Computer literate people are all too 
+aware of this, and have even given this a name: GIGO (Garbage In Garbage Out).  
+
+	With the advent of modern computers, engineers (as well as many other technical jobs) have had 
+available a tool that can help them do their jobs quicker, more accurately, presentably, and much more!  The 
+main question is what software are you going to use?  Programming it all yourself is cumbersome, time 
+consuming, custom for each application, requires extensive understanding of all the topics encompassed, and 
+on top of it all, possibly ridded with error.  However, existing software packages have most of the features you 
+require at a simple to use level ("User-Friendly").
+
+	The major problem that most people have is which software package to buy!  The correct answer has 
+got to depend on your current needs, and your expected near-term future needs.  Far future needs probably 
+should not be addressed due to the continually evolving computer software and hardware world, and should be 
+re-evaluated when you get there.  Some topics to consider are:
+
+
+	1)	Ease of Learning/Use (User-Friendly)  
+	2)	Analytic Capability
+	3)	Graphic Capability
+	4)	Expandability/Modularity
+	5)	Technical Support/Support Groups
+	6)	Hardware Requirements
+	7)	Price
+
+	Considering that this tutorial is primarily prepared for a course in which it is beneficial for the student 
+to own their own software (Maximizing Capability/Minimizing Costs), versus having a classroom license 
+(which usually ends up being a one time experience), I suggest using "The Student Edition of MATLAB" by 
+The MathWorks, Inc.  It Includes Software, Manual, User Groups, etc., and has most all essentials that assist in 
+learning a wide variety of topics at a very modest price.*
+
+	"The Student Edition of MATLAB" package gives you extensive mathematical/ analytical/graphical 
+capabilities, as well as a "taste" of two of the different professional level toolboxes (Signal Toolbox & Control 
+Toolbox) that they combine to call the "Signals and Systems Toolbox" (quite adequate for classroom training 
+purposes of both topics).  This is adequate for you to realize many control theory applications, the 
+programming potential of MATLAB, and the ease of dealing with toolbox add-ons (conceptually and 
+mathematically).  Another item of interest to all, is that there are available "FREE" toolboxes to all who desire 
+(accessible via their FTP site).  In their newsletters (that they willingly send to registered users) they already 
+have listed textbooks that use MATLAB and/or have toolboxes associated with the books.  To top it off, they 
+maintain a MATLAB User Group software library (nicknamed MUG) that contains all past newsletters, and 
+FREE User software, as well as examples, and other useful information, available at no charge to you.  
+
+*  All references to pages or manuals herein is for The Student Edition version 3.5, unless otherwise annotated
+
+3.  First Time Usage - MATLAB Installation
+
+	Installation is quite straight forward for an IBM PC, just time consuming.  Some basic knowledge of 
+DOS and the system that you will be working on is assumed.  I have identified certain typos in the Student 
+MATLAB manual (first printing) for the IBM PC, and I suggest you correct them prior to reading and 
+installing MATLAB:
+
+
+	1)	Page 16 : "three or more 360K" should read "two 360K"
+	2)	Page 26 : "\MATLABGEO" should read "\MATLAB\GEO"
+
+	Now simply follow the directions in appropriate Getting Started section.  Once completed, you are 
+ready to start using the Student Version of MATLAB.  You may want to read the section on MATLAB 
+fundamentals before trying to use MATLAB, but definitely read this page completely first.
+
+	If you have followed the installation section of MATLAB, all you have to do to start using MATLAB, 
+is to type "MATLAB" and hit enter at the DOS prompt.  After a moment to load, you should see the MATLAB 
+copyright message on the top of the screen, followed by the line "HELP, DEMO, and INFO are available" (if 
+proper installation has occurred).  If this much does not come up whenever you activate MATLAB, something 
+has gone wrong.
+
+	If you encounter any difficulties with the package:
+	   1)	Re-read the appropriate chapters in the textbook.
+	   2)	Check for obvious typographical errors.
+	   3)	For the Student Edition, consult the instructor (he has technical support available to him).
+		For the Professional version, consult the MathWorks.
+
+	The first time (and only the first time) that you activate MATLAB, it will prompt you for registration 
+information (serial number and your name) following its normal messages.  The MATLAB book does not tell 
+you anything about this step because it is a leftover feature from the professional version not described in any 
+(Student version or Professional Version) of their manuals (it is explained with a separate letter attached to the 
+professional version).  It is a formality, so that you can identify your copy of MATLAB without having to pull 
+out your original diskettes when calling for technical support.  Fill it in by answering the prompts that come on 
+the screen.  I do suggest entering your name, if nothing else but to personalize this copy as yours.
+
+	To add additional toolboxes to MATLAB, merely follow the directions on the bottom of page 26 (as if 
+you are adding a library of your own).  For installing the FREE "Modern Control System Theory and Design 
+Toolbox" (henceforth called the MCSTD toolbox) a sample list of instructions are listed.
+
+
+	1)	"MD \MATLAB\MCSTD", I chose the name MCSTD as an abbreviation of the name.
+	2)	"COPY A:\TOOLBOX \MATLAB\MCSTD", copy the toolbox part of the MCSTD diskette.
+	3)	"EDLIN \MATLAB\BIN\MATLAB.BAT", update the file to reflect the new toolbox.  In 
+MATLAB version 4.0, the file "MATLABRC.M" must be updated.  The "SET 
+MATLABPATH=" has now got to have ";\MATLAB\MCSTD" appended to it.
+	4)	The toolbox is fully installed and ready to be used in MATLAB.
+
+	With Matlab version 5 or any UNIX based version, the toolbox installation procedure is slightly 
+different.  The sample list of instructions below outline the Windows 95 toolbox installation of the MCSTD 
+(precise pathing may be different on your system depending on installation).
+
+
+	1)	"MD C:\MATLAB\TOOLBOX\MCSTD", I chose the name MCSTD as an abbreviation of the 
+name.
+	2)	"COPY A:\TOOLBOX C:\MATLAB\TOOLBOX\MCSTD", copy the toolbox part of the 
+MCSTD diskette.
+	3)	"EDIT C:\MATLAB\TOOLBOX\LOCAL\PATHDEF.M", update the file to reflect the new 
+toolbox by adding "'/MATLAB/TOOLBOX/MCSTD:', ..." to the end of the Path Defined Here 
+section.  Please note to use the "/" for directory differentiation here, since Matlab will convert it 
+to the appropriate version for your operating system.
+	4)	The toolbox is fully installed and ready to be used in MATLAB.
+
+	The problems, figures, fortran and demo directories that come with that toolbox are non-essentials (but 
+give a nice demo of the MCSTD features and variety of working example from this book).  They can be 
+executed directly from the floppy diskette (not cluttering your hard disk if you are tight on space), or installed 
+in a similar manner as above.  The readme.m, contents.m, tutorial & synopsis files should be printed as 
+reference material.
+
+4.  First Time Usage - Performance Tuning MATLAB
+
+	This section is not required reading!  This section is, what I consider, an advanced topic not necessary 
+for proper use of MATLAB.  But, for those of you who intend to spend hours at a time using MATLAB 
+(Student or Professional version), it may well be worth your time to read this section.  These are the 
+suggestions that I make to my fellow colleagues using MATLAB, for significantly improving performance at 
+an insignificant cost!
+
+	The first thing you notice when starting MATLAB, is how long it takes to start before you can type.  
+Those of you with sharp eyes and/or minds might even notice a lot of hard disk activity occurring during this 
+time.  This is because MATLAB is an interpreter.  That means for every command (except a few considered 
+internal) that you give, it must read the file with that command in it (and similarly the same for every command 
+called inside the original command).  With that in mind (and the fact that you can't change this), the faster the 
+drive that has all these commands on them, the faster your performance.  
+
+	The limiting factors for your choice, as you will see, is available computer memory and/or your desire 
+to try something different.  Buying a new and better drive is often overkill and may not give you peak 
+performance.  Software that improves your current drives speed is a step in the right direction; however, 
+creating a drive out of computer memory (which is the fastest possible drive for your machine) is the ideal 
+choice.  The super-intelligent ones will even use a combination of these techniques (as I am about to explain).  
+I have seen speed factor improvements of 3 to 15 times performance using these techniques.  As more powerful 
+computers/software comes out, this factor may decrease.
+
+	With the advantages comes the disadvantages (and I feel I should point them out before going any 
+farther).  When creating memory drives, as the computer is turned off, all information on that drive is lost.  My 
+solution is to copy the standard toolboxes and software to that drive when I am going to use it (requires a small 
+addition length of time), and keep my personal routines and data on my hard disk (the best of both worlds).  
+Also, most PCs have limited memory which you use sparingly.  My solution is: if you don't mind the speed, 
+stick with what you have.  Otherwise, merely buy and install more memory (the appropriate type: e.g., 
+expanded or extended) for your computer!
+
+	The amount of memory that you desire for your memory drive (henceforth called ramdrive) depends on 
+how much software you want to put there, the more you put the faster you go!  Demo routines with their data 
+don't have to be kept on the ramdrive after you have become familiar with them.  But for now, you can add up 
+the sizes of the files you want to move (add 10% for blank space) to see how big this ramdrive should be.
+
+	The commands that add this ramdrive to your system (provided that the memory is already there) is 
+either vdisk, ramdrive (in DOS) or whatever appropriate software that came with the memory that you 
+purchased.  An example of my computer setup (using DOS version 5.00 with high memory; your machine may 
+be different) for the Student Edition of MATLAB is:
+
+
+	1) 	Add "DEVICE=C:\DOS\RAMDRIVE.SYS 2000/E" to the file "C:\CONFIG.SYS" makes a 
+2000KB (2MB) ramdrive.  Most all ramdrives make you add one or more lines to the file 
+"C:\CONFIG.SYS".  When your computer is rebooted, the ramdrive should be available for 
+use.
+	2)	Add "DEVICE=C:\DOS\SMARTDRV.SYS" to the file "C:\CONFIG.SYS", adds disk caching 
+upon reboot.
+	3)	Add "FASTOPEN C:" to the file "C:\AUTOEXEC.BAT", improves file access performance for 
+that drive.
+
+4.  First Time Usage - Performance Tuning MATLAB (continued)
+
+	In step one, above, you may choose an appropriate size for your specific needs.  I chose 2MB because it 
+is adequate to hold all of Student MATLAB (version 3.5) and the complete MCSTD diskette, serving my 
+purpose quite well.  You may choose not to put all that on your ramdrive, but only the parts that you are going 
+to use (such as no demo files, compiler linking files, example files, etc.).  On the other hand, you may have 
+other toolboxes that you want to put on this ramdrive.  This is a choice that you must make!
+
+	Now that you have your ramdrive set up (all changes have been made and you have rebooted), you 
+want to take advantage of these changes.  I will use "F:" as the letter of the ramdrive created, change according 
+to your individual system.  Your file that starts MATLAB up ("C:\MATLAB\BIN\MATLAB.BAT") has to 
+reflect these changes.  This is how I suggest altering that file:
+
+
+	1)	Add to the top of the file a line for each directory that you want to copy which copies that 
+directory from your hard drive to your ramdrive.  One example is "XCOPY 
+C:\MATLAB\MATLAB F:\MATLAB\MATLAB\". This would copy MATLAB from your 
+hard disk C: to your ramdrive F:.
+
+	2)	Alter the "SET MATLABPATH=" line by including the drive letter where the directory exists 
+for each directory listed (you may mix between hard disk and ramdrive as you choose).  In 
+MATLAB version 4.0, the MATLABPATH is set in the file "MATLABRC.M".
+
+	The next performance suggestion concerns improving the speed of shelling to DOS with the MATLAB 
+"!" command.  If the computer uses the file "COMMAND.COM" from a ramdrive, it can load and execute the 
+"!" command faster.  Not only MATLAB will benefit, any program that shells to DOS will benefit from this 
+tip.  This is my suggestion for altering the file "C:\AUTOEXEC.BAT":
+
+
+	1)	Add "COPY C:\COMMAND.COM F:\" to the bottom of this file.
+
+	2)	Add "SET COMSPEC=F:\COMMAND.COM" following the copy line.  This tells DOS to use 
+that file when shelling to DOS.
+
+	Additionally, anything that makes that operating system perform faster will usually help the application 
+that is running on that operating system (in our case Matlab).  With operating systems that support multiple 
+applications/users, performance tuning can become an art form in and of itself.  Further DOS/operating system 
+performance tips I leave to the experts to suggest (but I do like this one above in particular).
+
+	My last performance suggestion, as mentioned earlier, concerns demo files which take room but also 
+make the computer search for each MATLAB command a little larger (since it checks all file names in the 
+MATLABPATH until the file is found).  I don't like loosing anything, so what I do is move the 
+demos/examples of each toolbox to separate directories (as I've already done in the MCSTD toolbox).  This 
+way I can always add the demos/examples to the MATLABPATH in the MATLAB.BAT file.  Personally, I 
+like to do as little as possible, and just create a copy of the MATLAB.BAT file (I call MATLABD.BAT) with 
+those changes made to it.  Also, I don't copy the demos/examples to the ramdrive (reducing the room required 
+on the ramdrive as well) unless I want them (as in MATLABD.BAT).
+
+5.  First Time Usage - MATLAB Fundamental Concepts
+
+	MATLAB is a very simple, but efficient, interpreter (versus compiler).  This allows you to type in a line 
+and have it execute immediately.  The tremendous advantage is that you don't have to re-compile your program 
+(like in Fortran, Pascal, or C) for every change you make before re-executing the code (allowing the simple 
+addition of toolboxes whenever desired), as well as the ability to view the values of the variables without 
+adding debugging write statements to your program.  MATLAB does include an interface so that you can 
+execute you Fortran or C code from inside MATLAB (see MATLAB manual section on MEX files).  Like any 
+other language, it has a small subset of commands (statements), from which other more sophisticated 
+commands are developed by the users.  There are five fundamental items in MATLAB: variables, functions, 
+programming code, algebraic operators and the recent addition (as of version 5) which I shall call structures.
+
+	Variables, in MATLAB, are all treated as matrices.  Text strings (which are stored as matrices), 
+however, are automatically given a special attribute, so that the ASCII text value is printed (not the numeric 
+value).
+
+	Functions in MATLAB operate slightly different than most programming languages (with the possible 
+exception of C++).  Most MATLAB functions take none, one or more variables as parameters (within the 
+parenthesis), and return none, one or more variables as a result.  An unusual aspect of this is that a single 
+function can be used many different ways depending on how many parameters are being passed in, the type of 
+data being passed in, and how many parameters are being retrieved out.
+
+	Programming code, in MATLAB, is mainly for control flow, directory manipulation, data storage, and 
+debugging purposes.  Like most languages this includes: if, else, end, for, while, ... etc. .  They will be 
+discussed in more detail as later in this text.
+
+	Algebraic operators, in MATLAB, are very similar to the math operators that you are used to, with only 
+a few minor exceptions.  The main consideration to be taken when using them is that they are (almost all) 
+matrix math operators.  If you want to use scalar mathematics, you must take care to use the scalar versions of 
+the algebraic operators.
+
+	Structures are groups of variables, algebraic operators and/or other structures that are grouped together 
+in one entity and are referred to by that structure quantifier.  I shall not elaborate to much on this topic, keeping 
+this presentation to the simpler more basic concepts.
+
+	Another topic that should be mentioned in the fundamental concepts section, is the concept of 
+toolboxes.  A toolbox, in MATLAB, is a collection of functions/utilities that work together on a specific topic 
+(i.e.: Signal processing, Control processing, System Identification toolbox, ...) so that it (hopefully) meets all 
+your needs on this topic, and you do not need to program any functions for your own needs.  As your skills 
+expand into other areas of expertise, there are other toolboxes (the MATLAB toolbox list is always growing) 
+available for (in the professional world) a reasonable cost (versus you programming-debugging-testing your 
+own code for each specific need).  The MathWorks' desire to express this highly important fact has lead them 
+to include the "Signal and Systems" toolbox with their Student Version.  This toolbox gives the user a taste of 
+the professional versions of the Signal toolbox and the Control System toolbox.  A more detailed discussion on 
+these and other toolboxes will follow later in this document.
+
+6.  First Time Usage - Matrix Representations
+
+	Up until recently, every variable of any sort in MATLAB is a matrix.  The approach is to represent a 
+wide variety of items as matrices.  Once certain conventions are agreed upon (which MATLAB has many 
+predefined), all that remains is to learn how to use it.  All the types about to be described here have values 
+which are either real or complex.
+
+	Scalar values start very simple, represented as a 1 by 1 matrix.  It can take on any double precision 
+value that the computer can represent, including some unusual ones : Infinity (Inf) and Not-A-Number (NaN).
+
+		"Inf" represents a number beyond the computers ability to represent. Almost any mathematical 
+operation dealing with it yields the value Inf, as should be expected.
+
+		"NaN" is difficult to illustrate its use; consider a set of data with one value in it that is totally 
+absurd.  If you use that value in your data set, your analysis results will be totally corrupted.  Instead of 
+removing that data from your set (which sometimes cannot be done) it would be nice to say that value 
+is Not really a valid Number, hence NaN.  Now we can agree to check for this value in our analysis 
+routines, which is already done in many MATLAB routines.
+
+	Vectors values become a little more sophisticated, represented as a 1 by N matrix or a N by 1 matrix (N 
+being the length of the vector).  The distinction between the two representations is used by MATLAB, and will 
+be examined later in this document.  The typical uses of a vector is for a set of data, polynomial 
+representations, ... .  These uses will become more apparent to you as you practice with the topics presented 
+later in this document.
+
+	Matrix values are straight forward, it represents a matrix.  In MATLAB version 4.0, matrices have an 
+added feature of being "sparse".  Sparse matrix technology is a method for storing a large matrix filled with 
+mostly zeros, in a much smaller storage space.  This can aid in speed when dealing with these matrices.  This 
+feature does not change the features of a matrix, just the physical storage and speed of execution when used.  
+Some typical matrix representation examples are sets of data samples, transition matrices, covariance matrices, 
+... .  Once again, these uses will become more apparent to you as you practice with the topics presented later in 
+this document.
+
+	Strings are a little more confusing to understand.  A simple strings are stored, like vectors, as a 1 by N 
+matrix.  The difference between strings and vectors is that strings are given a special attribute (automatically set 
+by MATLAB) so that it will be displayed properly on the screen.  A non-vital detail (trivial, for reference 
+purpose only) is that each letter in a string is stored as the numeric value of its ASCII representation.  When 
+multiple lines of varying size text are stored in a variable (available since version 5), matlab has improved their 
+treating of this and stores it like an array of string that can each be of varying size.
+
+7.  First Time Usage - MATLAB Fundamentals
+
+	The MATLAB prompt that is listed/described in the manual is the "©".  At this prompt you will begin to 
+learn and use MATLAB.  This practice session is created to give you the idea of how exit, find help and inquire 
+about variables in MATLAB.
+
+	MATLAB, like most modern software packages, tries to make the commands it uses very simple and 
+logical.  Most commands are like their english counterparts, making (hopefully) the commands simple for 
+everyone to understand.  One important fact that should be stated now is that MATLAB is case sensitive (this 
+means that entering things in upper case is different than entering things in lower case!).  The Student manual 
+mentions one paragraph on this subject (page 46, last paragraph).  All commands that are to be entered in the 
+following practice session shall be in lower case unless specifically stated!  After each command has been 
+entered, to start the execution of the command press enter or return (this shall be assumed stated with each of 
+the following commands, unless otherwise stated).
+
+	The first thing that any software should teach, is how to exit the software and get back to your operating 
+system (DOS).  Their are two ways to do this: "exit" or "quit" followed.  Both are good examples of the 
+English-like commands.  A good idea before exiting any software program is to save your work, but for right 
+now we shall not do this (especially since we have done no work, and you have not been shown how to save as 
+of yet).  After executing either of these commands, if you choose to continue using MATLAB, you must start 
+MATLAB up because you have been returned to DOS.
+
+	The next thing that we are going to do is to "demo" some of the MATLAB features.  Hopefully, you 
+would guess that the command to do this is "demo" and you would be right.  An extensive demo has been 
+prepared by MATLAB, showing you a wide variety of its capabilities.  You should take the time to try a few 
+(or all) of these demos at your leisure.
+
+	The "help" feature of MATLAB is very useful to the user.  This was designed so that you don't have to 
+pull out the MATLAB manual (or toolbox manual(s)) in order to be able to understand the various commands 
+currently available to you.  There are several different ways to use the help command, depending on the version 
+of MATLAB that you possess.
+
+		By typing "help" by itself, you will get either list all installed toolboxes (version 4.0) or a list of 
+all the currently available commands organized on different screen according to the toolboxes that you 
+have installed (prior to version 4.0).  As you add additional toolboxes to MATLAB, each toolbox will 
+have its own screen listing the commands available in that toolbox.  This is a nice feature which helps 
+the individual think in a modular fashion when going into the professional world.
+
+		In version 4.0, typing "help" followed by a space and the installed toolbox directory name, will 
+list the commands in the toolbox with a one line explanation of their functions (e.g.: "help matlab").
+
+		Additionally, by typing "help" followed by a space and any listed command (in the manual or 
+on the help screens), you will get an explanation of the individual command and how to use it (e.g.: 
+"help quit").
+
+7.  First Time Usage - MATLAB Fundamentals (continued)
+
+	Lastly, for this section, I am simply going to tell you to read chapter 6-9 of The Student Edition of 
+MATLAB (pages 43 - 78).  Chapter 6 ("Fundamentals") is adequate, and I suggest getting some hands on 
+practice while reading this chapter (knowledge of the functions being used is not currently necessary, but if you 
+would like to understand them you can use the help command or read it in The Student Edition).  Chapters 7-9 
+(Matrix Manipulations) should be reviewed.  Other functions worth reading about (or at least glancing at the 
+help screens) are:
+
+
+	1)	"!" allows you to execute DOS commands (from inside MATLAB), without having to quit your 
+MATLAB session (called shelling to DOS).  When the DOS command that issue following the 
+! has completed, you are returned to MATLAB without losing any of your MATLAB session.
+		TSR warning : Do not use the "!" to run any TSR program.  Start all TSR programs prior to 
+entering MATLAB.  TSRs take memory to add themselves to your environment (DOS).  
+MATLAB is not aware of this memory usage, and will consequently use the memory, at some 
+point in time, clobbering software and probably corrupting MATLAB and/or DOS (in 
+memory)!  Don't be fooled if you don't see this happen, you may have lucked out in one of 
+several ways this time!  This time MATLAB may not have used the memory.  This time what it 
+clobbered may not have had any effect.  Or you simply didn't realize that the corrupted system is 
+now returning corrupted results (MATLAB and/or DOS) !!!
+
+	2)	"load" allows you to get data that has been stored.  Two forms of data currently can be loaded: 
+their own special form (called MAT files) and ASCII files that contain one numeric matrix (any 
+size allowed) in it.  This is useful to get data into MATLAB from other software packages.
+
+	3)	"save" is the counterpart to load.  This allows you to save data for future use.  Like load, it saves 
+as a MAT files or as an ASCII file (upon request).  This is useful if you intend to export data to 
+other programs after processing it in MATLAB.
+
+	4)	"plot" is your first step into MATLAB's graphic world.  Their are too many different graphic 
+commands to list, each with accompanying support functions.  But as you may have guessed, 
+"plot" plots data on the screen.  
+			Getting printed copies of the graphs are done in several different ways (see Appendix C 
+in the Student Edition manual): using a graphic screen dump to the printer utility (printed 
+quality is only as good as the screen resolution), using the "meta" command with their "GPP" 
+software (professional MATLAB prior to version 4.0), and using the print command or print 
+menu (professional MATLAB version 4.0).  Since this is for the student version, I shall discuss 
+the screen dump utility.
+			DOS and MATLAB both come with screen dump TSRs (see prior TSR warning).  If 
+you intend to print any plots, you should load either one of these utilities prior to starting up 
+MATLAB!  The DOS utility is called "GRAPHICS".  The MATLAB utility (see page 16) is 
+"EGAEPSON" for Epson compatible printers, or "EGALASER" for laserjet compatible 
+printers.  See pages 27-28 on how to install it properly.  If you have problems printing and have 
+a VGA monitor, a suggestion is to restart MATLAB in the EGA mode (as described on pages 
+20-21).
+
+	Most functions are recognizable by their name and one line descriptions.  In the Student Edition manual 
+(the only book that I reference by pages), you will find this section on pages 185 through 194.
+
+8.  Control Systems - Data Representation
+
+	In the Data Representation Section, you learn to represent real systems as mathematical models.  Any 
+type of control system is going to be represented as matrices in MATLAB.  The trick is to become fluent with 
+their usage (which only really comes with practice).  Each of the following sub-sections will make sense as you 
+have been properly introduced to their topics by your instructor!
+
+	First and foremost, in most control theory classes, is the Transfer Function representation of a system. 
+ This is where a system is represented a series of polynomials, usually organized (as in most control theory 
+textbooks) as: 
+	Here, a Single-Input/Single-Output (SISO) transfer function can be represented as two polynomials of 
+decreasing powers (numerator polynomial divided by a denominator polynomial).  Page 173 of the Student 
+Edition, (20.1.2 Transfer Function) describes a more complicated system, namely Single-Input/Multi-Output 
+(SIMO), for analysis using the transfer function method.  For educational purposes, I suggest sticking to the 
+simpler SISO systems (most instructors do).  In MATLAB, a polynomial (numerator, denominator or other) is 
+represented as a row vector (1 by N matrix) containing the scale factors for each of the sequentially decreasing 
+powers of s.  This is a very important point to comprehend before reading the following examples:
+
+
+	1)	"17s5+23s3+8s2+6" converts to "[17 0 23 8 0 6]".  The highest power of s is five, so there will 
+be six numbers in this vector (s-powers 5 to 0).  Powers of s that are not there have scale factors 
+of zero, and are not to be forgotten (they hold the s-power sequence and are NOT to be 
+forgotten).
+
+	2)	"5+12s+4s3+3" converts to "[4 0 12 8]".    If you cannot visually see this, then the best thing you 
+can do for yourself is to rewrite the polynomial in "decreasing powers" of s as such : 
+"4s3+0s2+12s1+(5+3)s0" or more simply "4s3+12s+8".  You should now be able to see how to 
+do this.
+
+	Next is the Zero-Pole-Gain method, presented on pages 173 - 175 (once again I suggest sticking to 
+SISO systems for educational purposes).  This is similar to the transfer function in that the two methods 
+represent the same exact equations, merely the equations have been manipulated into a different form.  The 
+difference is that the polynomials have been factored into their roots, and "k" is the gain that makes the 
+equations equal (namely the highest s-power numerator scale-factor divided by the highest s-power 
+denominator scale-factor).  This representation of the system is:
+ 
+	Here, a Single-Input/Single-Output (SISO) system (called Zero-Pole-Gain function) can be represented 
+as two sets of roots (numerator & denominator) and a gain factor.  When any of the numerator roots values 
+goes to zero, the overall function value goes to zero; hence, the numerator roots are called "Zeros".  When any 
+of the denominator roots values goes to zero, the overall function value goes to infinity; hence, the denominator 
+roots are called "Poles".
+
+8.  Control Systems - Data Representation (continued)
+
+	Page 173 (20.1.3 Zero-Pole-Gain) describes a more complicated system, namely Single-Input/Multi-
+Output (SIMO) system, for analysis using the Zero-Pole-Gain method.  For educational purposes, I again 
+suggest sticking to the simpler SISO systems (most instructors do).  In MATLAB, a set of polynomial roots 
+(numerator, denominator or other) is represented as a column vector (N by 1 matrix) with each element 
+representing one of these roots.  The Student Edition attempts to show this 'simple' transformation with one 
+example followed by one example of the Zero-Pole-Gain method.  A few examples follow to challenge your 
+understanding of "polynomial root" representation:
+
+
+	1)	"(s-3)(s-4.5)(s+100)" converts to "[3 ; 4.5 ; -100]".  By now you should recognize the semicolon 
+from MATLAB as meaning (among other things) a new line (new row).  This makes the matrix 
+listed above become a 3 rows by 1 column matrix (column matrix, three in length).
+
+	2)	"(s-2)(s-500)(s-30)" converts to "[500 ; 30 ; 2]".  Your first guess would probably be different 
+([2 ; 500 ; 30] is also correct), because the order of the elements in this column vector (roots) is 
+irrelevant, since in multiplication the order in which you multiply is irrelevant (at least in scalar 
+math).  Therefore, any order, as long as all are accounted for, is correct (done to make that 
+point).
+
+	3)	"(s-40)3(s-80)" converts to "[40 ; 40 ; 40 ; 80]".  Each root has to be accounted for.  Multiple 
+roots must be accounted for each time it is multiple.
+
+	4)	"(s3-11s2+38s-40)(s-3)" converts to "[2 ; 4 ; 5 ; 3]".  You must always remember to factor to a 
+single power of s (even if this makes complex values)!  s3-11s2+38s-40 factors into (s-2)(s-4)(s-
+5).
+
+	Continuing, the easiest of the system representations to explain arises.  State-Variable has become 
+popular in the professional industry, due largely to the ease for representing Multi-Input/Multi-Output systems. 
+ Several signals can be evaluated simultaneously in very sophisticated systems without having to trace through 
+the transfer functions for each Input to Output.  Several other subjects that may cross your path in your 
+progression of control theory knowledge (e.g., Kalman Filter, Sensitivity Analysis), use this base structure to 
+build upon.  I do suggest you take the time to thoroughly understand these principles for your future 
+classes/careers.  Consider the following state and output equations, respectively:
+
+	 
+
+	 
+
+
+	The "A" matrix represents the system dynamics, namely how the system is connected and where the 
+integrators are located.  "B" represents how inputs couple into the system.  "C" represents how the outputs 
+couple out of the system. "D" represents what portion of the inputs couples directly into the output.  This 
+representation may abstract the original design a little, but the advantages are quite significant.  One such 
+advantage is the improved precision of the representation, it suffers from fewer computer round-off type 
+problems.
+8.  Control Systems - Data Representation (continued)
+
+	Each of these three (Transfer Function, Zero-Pole-Gain and State Variable) representations have there 
+advantages for visual inspection,  but the conversion of them from one form to another form can be 
+cumbersome.  MATLAB has realized this, and created several routines that allow you to convert from one 
+representation to the next.  A list of them, as well as their relations to each other, continuous and discrete 
+versions, has been prepared and is stated on page 178 (20.1.6 Model Conversions).  A good exercise would be 
+to pick a system, convert it to one of these representations, and then convert this representation to others with 
+these routines.  Practice in becoming familiar with these representations and converting between them is left to 
+the readers' discression.
+
+	Another aspect to consider is whether your system is continuous-time or discrete-time systems!  In 
+reality, modern systems (digitally controlled) read the continuous input (analog data) at discrete intervals 
+making hybrid (sampled-data) systems.  Breaking these systems apart, we can separately look at the continuous 
+parts and discrete parts, or we can create "equivalent" models of these systems by using conversion routines.  
+The concepts of hybrid systems are mind-boggling, and often preferred to convert their representations to one 
+or the other (continuous or discrete) "equivalent" system for analysis.
+
+	What comes with the "Signal and Systems" toolbox is one utility to convert from continuous to 
+discrete, called "C2D" (located on P. 178 and P. 219).  (The professional Control Toolbox has many utilities 
+that go back and forth with a variety of methods for converting.)  The MCSTD toolbox comes with the 
+conceptual essentials (further elaborated in the demo m-file) to do almost all the conversions that the 
+professional toolbox does.  The MCSTD toolbox even gives and uses examples of these conversions, since 
+they are mostly polynomial substitutions (see polysbst in the MCSTD toolbox).  Once again, this is an 
+excellent teaching tool for control systems theory, while not giving you all of the professional Control System 
+toolbox features.  Without the book, Modern Control System Theory and Design, Second Edition, all that can 
+be explained and practiced is the "C2D" function, which is straight forward when reading it in the Student 
+Edition.
+
+	A visual implementation of the system modelling is also available.  It utilizes the above data 
+representations of the basic building blocks, and the capability to interconnect the blocks.  The Simulink 
+Toolbox, used for system simulations, allows building of the system models in this visual sense (see section 14 
+on Simulation in the Time Domain).  The Simulink developed model can be "queried" for the states contained 
+in the system model.  However, this is considered an "advanced topic" in Simulink manual and comprehension 
+of the "S-Function" returns shall be left to the Simulink manuals.
+
+9.  Control Systems - Bode Diagram
+
+	  Using the general purpose example where G(s) is the forward loop gain and H(s) is the negative 
+feedback gain, the overall closed loop transfer function is:
+ 
+
+	The desire is to see where (in the frequency domain) the feedback causes the system to become 
+unstable.  Prior to the feedback loop being closed, the system gain was only G(s).  Obviously the denominator 
+(1+G(s)H(s)) is the influencing factor, and that is what we shall be looking at (at least at first).  If the 
+denominator goes to zero (G(s)H(s) = -1), the system explodes and is an ideal example of instability.  But the 
+question of what happens at similar type values is an excellent question to be asked.  The Bode Diagram, 
+Nichols Chart and the root locus try to give insight into this question, each in their own special way.  Also, 
+most of these methods apply equally well to continuous-time as well as discrete-time systems.
+
+	The Bode Diagram attempts to visually display G(s)H(s) as amplitude and phase across a frequency 
+range of interest.  Then the results of this are compared (magnitude and phase separately) to +1 to determine 
+Gain Margin and Phase Margin.  These values measure how much G(s)H(s) cancels the +1 in the denominator, 
+and where this occurs.
+
+	With the Gain Margin, we are interested in the magnitude of G(s)H(s) when its phase is -180 (namely 
+purely negative real value).  An often suggested desirable range for Gain Margin that accomplish this is 4db to 
+12db.
+
+	With the Phase Margin, we are interested in the phase of G(s)H(s) when its magnitude is 1 (0db).  A 
+phase margin of -180 (magnitude 1 and phase -180 equals -1) will mean an oscillatory system.  An often 
+suggested desirable range for Phase Margin is 30 to 60 degrees.
+
+	Now, let us practice creating Bode diagrams using MATLAB.  There are many examples to practice 
+with for creating Bode diagrams on the MCSTD diskette.  Two functions exist that assist in Bode diagrams:
+
+
+	1)	"bode" is described on pages 210 - 213 of the Student Edition.  This function returns/plots the 
+Bode response of a system.
+
+	2)	"margins" is described in the MCSTD toolbox.  This, in my opinion, had an advantage to the 
+earlier versions of the Control System toolbox's "margin" routine!  Margins analytically 
+calculates, with analytic precision, all (not just one) the Gain and Phase Margins and their 
+associated frequencies (versus the common train of thought: interpolating a single value from a 
+plot).
+
+	When trying to find the proper syntax to call the "bode" utility, either using the help feature or looking 
+in the reference manual.  I personally prefer the help feature, unless I need an example.
+
+9.  Control Systems - Bode Diagram (continued)
+
+	Valid syntax for the "bode" utility, for transfer functions, is:
+
+		1)	[mag,phase,w] = bode(num,den)
+		2)	[mag,phase,w] = bode(num,den,w)
+		3)	[mag,phase] = bode(num,den,w)
+		4)	bode(num,den,w)
+		5)	bode(num,den)
+	
+	The first two are described in the Student Edition, but then the book continues to use Bode as in the last 
+two examples!  This may be confusing for those not familiar with MATLAB.  The left-hand arguments (mag, 
+phase and w) are optional for this function, as described on the second page of the Bode function in the Student 
+Edition book.  The next confusing thing that occurs is that the example that they give does not work because 
+the first line "[a,b,c,d] = ord2(1,.2);" is a utility that is only available in the Professional Control System 
+Toolbox.  The results, which can be manually typed, is listed below so that you may try the Bode example in 
+the book:
+
+	a = [ 0 , 1 ; -1 , -0.4 ] ;
+	b = [ 0 ; 1 ] ;
+	c = [ 1 , 0 ] ;
+	d = 0 ;
+
+	A major short-coming of the Bode diagram is that the margins (gain and phase) are not put onto the 
+plot when it generates the plots.  This gets compounded when you want to put them onto the plot, and you 
+discover that you can only modify the current plot (the last one being drawn was the phase) with reasonable 
+ease.  Adding to the magnitude plot is almost impossible (prior to MATLAB version 4.0).  This is why they 
+have the left-hand arguments, so that you can generate the Bode plots yourself with whatever customization on 
+the plot that you desire.  This is what is done in the MCSTD diskette when Bode diagrams are done in its 
+demo, figures or problems directory.  The MCSTD demo m-file does elaborate further on the creation of the 
+Bode diagram with on-screen examples.  There are many good simple example to look at in the figures and 
+problems directory in the MCSTD.
+
+10.  Control Systems - Nichols Chart & Nyquist Diagram
+
+	The Nichols Chart is another way to present the Bode diagram.  A Nichols chart presents on one plot 
+magnitude versus phase.  A function which displays this overlay grid comes either with the MCSTD or Control 
+System (professional version) toolbox.  Once again, the MCSTD diskette comes with several examples that 
+you can try.
+
+
+	1)	"nichgrid" is described in the MCSTD toolbox.  It is made to even deal with the Student version 
+(despite the matrix size limitation), as well as the professional versions.  It does put titles nicely 
+on the plot, and give some flexibility, but it is slow in creating this overlay.  The professional 
+version of this function ("ngrid") is much faster, but not quite as flexible.
+	
+	I personally prefer the flexibility of the nichgrid utility, and the fact that it can return the grid values to 
+you as an additional feature.  The MCSTD demo m-file does elaborate further on the creation of the Nichols 
+chart with an on-screen example.
+
+
+
+	The Nyquist Stability Criterion determines the number of zeros of 1+G(s)H(s) directly from the 
+Nyquist plot of the open-loop transfer function G(s)H(s).  The Nyquist diagram is found by mapping the 
+Nyquist paths into the complex plane using the open-loop transfer function G(s)H(s).  The Nyquist path in the 
+s-plane encircles the right half of the s-plane, and the Nyquist stability criterion is given by
+
+					N = Z - P
+where
+
+	N =	Number of the clockwise encirclements of the (-1,0) point by the Nyquist Diagram
+	Z =	Number of zeros of 1+G(s)H(s) in the right half the s-plane
+	P =	Number of poles of G(s)H(s) in the right-half of the s-plane
+
+For stability, Z must equal zero.
+
+	The Nyquist Diagram plots the value of G(s)H(s) as s goes from -j*Inf to +j*Inf.  The MATLAB 
+utility which displays/evaluates this diagram is call "nyquist".  Occasionally, the Nyquist Diagram has plotting 
+values which go to infinity.  When this happens, any computation based plot of this phenomena will tend to 
+suffer and yield visually unpredictable results.  Under these conditions, hand drawn plots are usually used 
+showing an undisclosed jump in each axis, followed by infinities being located on each axis.  The current 
+plotting capabilities cannot intuitively decide for the necessity of this, and somehow incorporate it into the plot 
+(as described above).
+
+11.  Control Systems - Root Locus
+
+	The root locus criterion considers how much gain can be applied (or gain altered) to the feedback loop 
+of system before it becomes unstable.  Writing or converting G(s)H(s) into its Zero-Pole-Gain representation 
+starts us towards visualizing the plot, but this step, and all the other usual steps to create this plot are 
+unnecessary with MATLAB!  Once again, the MCSTD toolbox enhances the professional toolbox by not only 
+plotting the root locus (rlocus), but also calculating almost any point of interest on the root locus plot directly 
+(the professional version has only "rootfind", a graphical method, to locate these points!).  The most commonly 
+required value, Kmax, can now be gotten directly with the MCSTD toolbox.
+
+	What is left now is to understand how to create root locus diagrams, and to practice creating them.  
+There are many examples of creating root locus diagrams on the MCSTD diskette (try some).  Several 
+functions exist that assist with root locus diagrams, of which I've listed ones that I believe are important:
+
+
+	1)	"rlocus" is described on pages 391 - 393 of the Student Edition.  This functions returns/plots the 
+root locus response of the system.  A single example is given in the text manual.
+
+	2)	"rlaxis" is described in the MCSTD Toolbox.  This function returns a set of data representing 
+the portion of the root locus that is on the real axis.
+
+	3)	"rlpoba" is described in the MCSTD Toolbox.  This function returns the value(s) (with their 
+associated gains) of the break-away/break-in points of the root locus.
+
+	4)	"rootmag" is described in the MCSTD Toolbox.  This function returns the value(s) (with their 
+associated gains) of any point on the root locus that corresponds to the specified magnitude.  In 
+the discrete root locus, a magnitude of 1 corresponds to Kmax.
+
+	5)	"rootangl" is described in the MCSTD Toolbox.  This function returns the value(s) (with their 
+associated gains) of any point on the root locus that corresponds to the specified angle.  In the 
+continuous root locus, an angle of ˜90 corresponds to Kmax.  Also, desired gains that 
+accomplish specified damping factors (corresponding to particular angles), can easily be picked 
+off (usually presented in compensation and design using the root locus).
+
+	These MCSTD features/utilities alone makes the MCSTD toolbox well worth any design engineer's 
+review.  Most of the critical values that normally have to be picked off of the plot can be calculated directly 
+using the MCSTD toolbox!  The Kmax value, indicating the maximum gain before instability occurs, is 
+calculated!  Break-away and break-in points of the root locus are also calculated in the MCSTD, instead of by 
+doing them by hand.
+
+	When trying to find the proper syntax to call the "rlocus" utility, either use the help feature or looking in 
+the reference manual.  Valid syntax for the "rlocus" utility is described on pp. 391-393.  Like the Bode utility, 
+the left-hand arguments (r and k) are optional for this function.  This is not described in the rlocus section of 
+the Student Edition book, but given as an example.
+
+	Other functions dealing with the root locus are also available only in the MCSTD toolbox.  The 
+MCSTD demo m-file does nicely elaborate further on the creation of the Root Locus and the important 
+associated points of interest with on-screen examples.  The significance of these utilities will be understood as 
+you progress to the appropriate topics (e.g., discrete time system analysis).
+
+12.  Control Systems - Simulation in the Time Domain
+
+	The tutorial has dealt so far with MATLAB and control systems analysis in the frequency domain.  It is 
+always good practice to check your analysis and the assumptions you have made by testing your results with a 
+comparison of your analysis and an actual implementation of the system.  The next best thing to a physical 
+implementation is a computer simulation implementation of the system.  With the advances in computer 
+technology, the distinction of the laboratory experimentation results and computer simulation results is 
+becoming hard to distinguish.  The cost (in time, material, resources, observability, and other factors) 
+frequently leads many individuals to selecting a computer simulation of the system over an actual 
+implementation of the system.  While computer technology has advanced in many ways, it is always good to 
+keep in mind that some of the more subtle error sources may be ignored (either by choice or by oversight) in a 
+computer simulation.  Computer simulations generally attempts to deal with the "ideal" or "near-ideal" world 
+process, rather than cluttering the user with an abundance of anomalies (e.g. wire resistance, hardware 
+variability, outside noise influences) that an actual implementation takes somewhat into account due to these 
+anomalies being accounted by the "real world" implementation.  In most cases, these anomalies have 
+insignificant contributions when comparing the "real world" implementation against a computer simulation of 
+the system.
+
+	The question of which computer system simulation software is very important.  A wide variety of 
+packages exist on the market, each with an impressive variety of features.  Section 2, "First Time Usage - 
+Software For Engineering" elaborates on the software selection criteria I suggest using.  However, my initial 
+observation is that our analysis was generated using MATLAB, and our system model and/or analysis results 
+already exists in MATLAB notation.  At this point, we are already familiar (no or a small learning curve 
+required) with the MATLAB software, notation methodology, etc..  The natural extension of MATLAB to a 
+time domain simulation would be a natural choice to make.  With this in mind, The MathWorks has generated 
+a toolbox, called Simulink, that accomplishes this goal.  Although the toolbox price may discourage an 
+individual student, a University or Corporation that desires these features will find Simulink not unreasonably 
+priced.  Simulink is an ideal tool for running many types of computer dynamic system simulations.  Almost 
+anyone familiar with the Windows environment can (after installation) begin almost immediately putting 
+systems together for simulation.  An important feature to mention is that the applications are not limited to the 
+standard linear devices we're used to, but also include many non-linear devices, look-up table type capability, 
+data stored on disk, as well as any MATLAB implemented function as a capability.  A wide variety of input 
+sources, as well as output display devices can be attached at any number of different points quite easily (similar 
+to what is done in a laboratory type environment).  This may sound like a lot to consider, but Simulink handles 
+the system development and simulation very smoothly, so much so that the average user should not mind the 
+complexity of choices with the ease of implementation.
+
+	Probably the most difficult of this task shall be to evaluate the displays, for checking that the system 
+performs in the manner that is expected.  At first glance, this may seem trivial, but the field of using 
+"engineering judgement" to verify results may end up as a complicated matter.  Think about checking your 
+systems time series output for a minimum phase margin of 30 degrees.  Engineering comprehension and a 
+"good eye" for this sort of information.
+
+13.  Control Systems - Simulations as Solutions for System Parameters
+
+	All of us have had solutions to problem elude us for one reason or other.  Most of us have used "trial 
+and error" methods to get some reasonable answer to these problems.  These solutions may not have the 
+theoretical backing to support them, but they work!  Some of these problems may even be unsolvable by other 
+"conventional" techniques.  Why should a simulation tool be excluded from this category of solutions?  The 
+answer is, there is no reason.  In fact, the use of this technique would be desirable as a general purpose (usually 
+last resort) tool.  Well, The MathWorks has done this for us in their "Nonlinear Control Design Toolbox".  The 
+MathWorks has taken the simulation software capability this one step further.
+
+	If a desired system response is known and some of the intermediate system parameters need to be 
+calculated in order to meet the desired response, this toolbox will attempt to optimize the intermediate system 
+parameter (within some predefined limits) to meet some set of constraints (usually based on the desired 
+response curve).  It takes the system simulation (as designed with Simulink) and attaches node(s) that contain 
+the constraint limitation(s) (the fundamental unit in the Nonlinear Control Design Toolbox).  The constraint 
+limitations also allows introduction of "uncertainty into plant dynamics, conduct Monte Carlo simulations, 
+specify lower and upper limits on tunable variables, and alter termination criterion".  The simulation chosen 
+may contain linear, non-linear, discrete, or any type of developed node that Simulink allows (the linear system 
+analysis capabilities is the subset, where there are only linear types of nodes implemented in this simulation).
+
+	The power of this toolbox lies in the fact that when system parameters cannot be calculated through 
+theoretical means, in order to meet the desired system response, this toolbox can be used to estimate these 
+parameters through a "trial and error" type of estimation (actually called an optimization technique).  There is 
+no reason that these types of analysis cannot be done with systems that contain "computable" system parameter. 
+ However, these simulations are time consuming, may not converge to a solution, and when they do converge 
+the accuracy of the results depends on many other factors (e.g., accuracy of the constraints, local minimization 
+difficulties, etc.).  A precise theoretical solution is usually preferred (in almost all fields of study), compared to 
+a "trial and error" type of analysis.  There are times when this is not possible, and that is when this toolbox can 
+be invaluable to the user.
+
+14.  Summary
+
+	The concept of toolboxes for MATLAB as a powerful tool becomes more and more visible.  The 
+toolboxes available, cover a wide variety of topics, and give the end-user the flexibility to buy only what he 
+needs now, while allowing him to grow with the different modules as he grows (also the toolboxes grow with 
+time, so that you get the most current when you need them).  Developing your own toolbox of features/utilities 
+can also be done with relatively little difficulty; however, a toolbox (available from The Math Works Inc.) 
+might already be available, offering: well planned functions, technical support, and a user manual.  The 
+relatively small cost may be well worth it versus using your time, effort, coding errors, invalid results due to 
+coding errors, etc..
+
+	The MCSTD toolbox is very useful and is recommend to any MATLAB user dealing with control 
+systems (accompanying the Student Edition or with the professional Control Systems toolbox).
+
+	This tutorial has illustrated how the MCSTD Toolbox can be used in conjunction with the following 
+MathWorks toolboxes: Signals and Systems Toolbox, Control System Toolbox; Simulink; Nonlinear Control 
+Design Toolbox.  A discussion of the Symbolic Toolbox is presented in the Demo file, and used in some of the 
+problems and figures files.
+
+	Another source of what appears to be bundle knowledge (continually growing) is the "MATLAB User 
+Group" Archive, nicknamed MUG.  MATLAB users are supplied a location to share their thoughts and 
+functions (as well as other tid-bits of information) with their peers here.  This is a vast collection of 
+information, that the average user will not sift completely through.  Currently it is available "FREE" (at their 
+FTP site) to registered owners of MATLAB.
+ 
+
+
+
+	I hope that you have found this tutorial and other files on the MCSTD Toolbox to be useful.  I hope that 
+you have found this learning package consisting of the book(s) and the MCSTD Toolbox to be useful and 
+helpful.  I am always interested in hearing from users of my book(s).  You may feel free to contact me at:
+
+Stanley M. Shinners
+28 Sagamore Way North
+Jericho, N.Y. 11753
+ 
+
+
+
+ 
+
+ 
+
+
+
+
+
+

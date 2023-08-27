@@ -1,0 +1,49 @@
+	One of the "new" features of MATLAB for Windows is the use of 
+the toolbox by the "name" (directory name) it is installed as.  
+This feature supplements the online help command and whatsnew 
+command by looking in the installed toolbox by name and displaying 
+the readme & contents.m file (appropriately).  An example of use 
+with your toolbox would be "help mcstd" or "whatsnew mcstd".  
+Online help (non-specific utility) comes from the file 
+"contents.m", and whatsnew comes from the file "readme.".
+
+	In MATLAB prior to version 4.0, the readme files were 
+uniquely numbered in each toolbox (by The MathWorks, e.g., 
+readme5.m).  The file called "readme.m" was the readme file to the 
+main MATLAB library (toolbox).  The particular readme file 
+displayed its own help file as part of its execution.  The file 
+called "contents.m" did not exist (rudimentary contents capability 
+were available by using help).  Also, if a particular filename 
+existed in several directories of the MATLABPATH, only the first 
+occurrence of the file was utilized (ALL other occurrences are 
+ignored).
+
+	To display the MCSTD contents file, in MATLAB prior to 
+version 4.0, you can simply type "help contents" or "type 
+contents".  If the filename "contents.m" does not exist in the 
+MATLABPATH (ordered path that MATLAB searches for files) prior to 
+your toolbox, then yours will be the first one found and 
+subequently the contents file will be displayed.  It contains 
+about a page worth of information, and will roll off the screen.  
+In MATLAB version 4.0, you have the capability to scroll up text 
+that rolled off the screen.  This is one reason that the tutorial 
+suggests printing the contents.m file for reference.  One feature 
+that MATLAB version 3.5 does have that version 4.0 does not have, 
+is the fact that help by itself displays the contents of the 
+installed toolboxes in a screen summary of available filenames 
+from each toolbox.
+
+	To display the MCSTD readme file, in MATLAB prior to version 
+4.0, you must type "type readme.".  Like above, MATLAB will find 
+only the first occupance of this file (that is why MATLAB does not 
+want to use "readme.m").  For similar reasons to above, the 
+tutorial suggests printing the readme file.
+ 
+
+
+
+ 
+
+ 
+
+

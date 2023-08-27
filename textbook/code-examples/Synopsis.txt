@@ -1,0 +1,355 @@
+	Synopsis of Modern Control System Theory and 
+Design, Second Edition
+
+	This synopsis highlights the features of Modern Control System 
+Theory and Design in a concise manner which is helpful in guiding the 
+professor on subjects to emphasize, and to the student and practicing 
+engineer for reviewing and remembering important aspects of the coverage.
+
+	The user should use this synopsis in conjunction with the software 
+contained in the Modern Control System Theory and Design Toolbox (MCSTD) 
+which complements the book, and enhances MATLAB and several of the 
+MathWorks' toolboxes.  The Modern Control System Theory and Design 
+Toolbox contains the m-files used to develop the solutions for the 
+problems presented in the book, and to the problems at the end of the 
+chapters.
+
+	The software contained in the Modern Control Theory and Design 
+Toolbox is compatible with all editions of the Student Edition of MATLAB 
+and the Professional versions of MATLAB (starting with versions 3.5 or 
+4.0).  It is also compatible with the MathWorks' software packages: 
+Control System Toolbox (version 2.0 or greater); Simulink version 1.2c; 
+Non-Linear Toolbox version 1.0; Symbolic Toolbox version 1.0.  Online 
+help is also available for all Modern Control Theory and Design Toolbox 
+utilities.
+
+	This integrated learning package consists of the book, the Modern 
+Control System Theory and Design Toolbox software, and the MATLAB 
+software is self-contained.  Therefore, the user has all the elements 
+needed to learn, and it is not necessary to purchase additional 
+books/materials to learn how to use MATLAB, the Modern Control System 
+Theory and Design Toolbox or the various applications with this book.
+
+Chapter 1
+
+	Chapter 1 illustrates the concept of feedback and presents the 
+status of practical applications of control systems, as it existed in 
+1992.  Feedback control concepts are illustrated from the viewpoints of a 
+positioning system for a missile launcher in Figure 1.9 on page 5, and in 
+a manual control system where a human steers an automobile as illustrated 
+in Figure 1.11 on page 6.
+
+	Practical state-of-the-art applications of control systems to such 
+fields as robotics (pages 7- 9), NASA space programs ( pages 8 - 12), 
+rail transportation (pages 10 - 14), air transportation (pages 14- 18), 
+military systems (pages 18- 22), surface effect ships and hydrofoils 
+(pages 22- 23), biomedical control systems (pages 23- 25), and 
+photographic automatic focus control systems (pages 25-26) are 
+illustrated. 
+
+	Section 1.6 (pages 27 - 29) contains Illustrative Problems and 
+Solutions related to Chapter 1.
+
+Chapter 2
+
+	Chapter 2 develops the mathematical techniques needed by control 
+engineers to analyze control systems from the classical Laplace 
+transform/transfer function/block diagram and modern state variable 
+viewpoints, and introduces MATLAB directly into the textbook.
+
+	MATLAB is introduced directly into the presentation in Section 2.8 
+starting on page 58. For those readers who are unfamiliar with MATLAB, it 
+is suggested that they read Sections A through E of Section 2.8 before 
+writing MATLAB programs. Table 2.2 on pages 72-73 summarizes commands and 
+functions used by MATLAB. Table 2.3 on page 74 summarizes commands used 
+by the Modern Control System Theory and Design Toolbox.
+
+	Transfer functions of complex feedback functions are determined.
+An illustration of using the classical Laplace transform/transfer 
+function/block diagram reduction technique method applied to a complex 
+feedback system is illustrated in Figure 2.11 on page 85.
+
+	The same system illustrated in Figure 2.11 on page 85 is reduced 
+very simply using Mason's theorem and signal flow graphs in Figure 2.18 
+on page 93.
+
+	The modern state variable method is developed.  It is applied in 
+several ways in this chapter, including the development of an algorithm 
+for determining the time response of a system which is shown in Eq. 2.248 
+on page 122.
+
+	The time response of the system shown in Fig 2.29 on page 113 to a 
+unit step input is shown in Fig. 2.35 on page 126, and was obtained using 
+the algorithm of Eq. 2.248 on page 122 with variable sampling times from 
+0.05 to 0.5 seconds.
+
+	The very useful state transition matrix is derived in Equation 2.256 
+on page 130.  It is applied to finding the transition matrix of an open-
+loop system whose transfer function is given by Eq. 2.266 on page 131, 
+and the resulting state transition matrix is obtained and is given by Eq. 
+2.275 on page 131.  From knowledge of this state transition matrix and 
+the initial conditions given by Eq. 2.276 on page 132, the system's 
+response is determined and illustrated in Figure 2.38 on page 132.
+
+	Section 2.30 (page 142 - 158) contains Illustrative Problems and 
+Solutions related to Chapter 2.
+
+Chapter 3
+
+	The state equation and the transfer-function representation of 
+commonly used physical linear control system elements are derived in 
+Chapter 3 for networks (Section 3.2 on pages 186 - 189), mechanical 
+control-system devices (Section 3.3 on pages 189 - 195), 
+electromechanical control-system devices (Section 3.4 on pages 195 - 
+213), hydraulic devices (Section 3.5 on pages 213 to 219), and thermal 
+systems (Section 3.6 on pages 219 to 221).  A very useful generalized 
+approach for modeling using the principles of conservation and analogy 
+are presented in Section 3.7 on pages 221 - 224). 
+
+	Section 3.8 (pages 224 - 227) contains Illustrative Problems and 
+Solutions related to Chapter 3.
+
+Chapter 4
+
+	Second-order control systems are derived and analyzed in Chapter 4. 
+ The response of the second-order control system illustrated in Figure 
+4.1 is determined for a unit step input.  Depending on the value of the 
+damping ratio (zeta), a critically damped (Figure 4.2a on page 243), 
+over-damped (Figure 4.2b), or under-damped (Figure 4.2c) transient output 
+response is obtained.
+
+	The transient response of an underdamped second-order control system 
+is determined in Eq. 4.24 on page 245, and the effect of various damping 
+factors is illustrated in Figure 4.4 on page 248.  The percent maximum 
+overshoot of an underdamped second-order control system as a function of 
+several damping factor variations is illustrated in Figure 4.5 on page 
+249.
+
+	The complete response of a second-order control system using the 
+state-variable-signal-flow diagram method is obtained in Section 4.3 
+(pages 248 - 252).  This approach obtains the complete solution of the 
+system response consisting of the particular solution due to an external 
+unit step input (which is the same response as Eq. 4.24 on page 245), and 
+also the homogeneous solution due to the initial conditions of the two 
+system states.
+
+	Guidelines for the "best" damping ratio to use in a particular 
+control system are presented in Section 4.5 on pages 252 - 255.
+
+	The procedure for modeling a transfer function from test data is 
+illustrated in Section 4.6 (pages 255 - 260).
+
+	Section 4.7 (pages 260 - 261) contains Illustrative Problems and 
+Solutions related to Chapter 4.
+
+Chapter 5
+
+	The advantages of control systems are developed in Chapter 5, where 
+the desirable sensitivity (Section 5.3 on pages 273 - 277) and accuracy 
+characteristics (Section 5.4 on pages 277 - 288) are developed.
+
+	The use of performance indices for governing the design of control 
+systems is presented in Section 5.6 on pages 290 - 292.  The use and 
+application of the integral of time multiplied by the absolute value of 
+error (ITAE) performance index is presented in Section 5.8 on pages  
+294 - 295.
+
+	Section 5.10 (pages 296 - 307) contains Illustrative Problems and 
+Solutions related to Chapter 5.
+
+Chapter 6
+
+	Methods for the analysis of control system stability are developed 
+in Chapter 6.  To illustrate the importance of the location of the system 
+poles on stability, Figure 6.2 on page 334 shows three very different 
+second-order systems and their different time-domain responses:
+
+a)	S1 represents the case of a system which has a pair of complex 
+conjugate poles in the left-half-plane and its response is an 
+exponentially damped sinusoid.
+b)	S2 represents the case of a system which has a pair of complex 
+conjugate poles in the right-half-plane and its response is an 
+exponentially growing sinusoid.
+c)	S3 represents the case of a system which has a pair of complex 
+conjugate poles on the imaginary axis and its response is an 
+oscillation of fixed amplitude.
+
+	The following stability analysis methods are developed in this 
+chapter:
+
+	1)	Routh-Hurwitz (Section 6.3 on pages 340 - 344)
+	2)	Nyquist Diagram (Section 6.5 on pages 349 - 359); Section 6.4  
+           (pages 344 - 349) first introduces the concept of mapping 	
+	contours from the s-plane to the F(s)-plane. The procedure for 	
+	obtaining the Nyquist diagram using MATLAB is illustrated in 	
+	Section 6.6 (pages 359 - 362).
+	3)	Bode Diagram (Section 6.7 on pages 362 - 380). Section 6.8 
+(pages 		380 - 385) illustrates the procedure for obtaining the 
+Bode               diagram using MATLAB. Section 6.9 (pages 386 - 398) 
+develops a 		program in FORTRAN and BASIC for obtaining the Bode 
+diagram, the 		closed-loop frequency response, and the transient 
+response for 		those readers who don't have MATLAB. (It contains the 
+logic flow 		diagram, listing, and output for an illustrative 
+example.) 
+	4)	Nichols Chart (Section 6.10 on pages 398 - 403). Section 6.11 
+		(pages 403 - 405) illustrates the procedure for obtaining the 
+		Nichols Chart using MATLAB.
+	5)	Root Locus Method for Negative Feedback Systems (Section 6.14 
+		on 		pages 409 - 431); the Root Locus for Positive 
+Feedback Systems 		(Section 6.16 (pages 434 - 437). Section 6.17 
+(pages 437 - 442) 		illustrates the procedure for obtaining the root 
+locus using 		MATLAB. Section 6.18 (pages 443 - 454) develops a 
+program in 		FORTRAN IV for obtaining the root locus for those 
+readers who 		don't have MATLAB. (It contains the logic flow 
+diagram, listing, 		and output for an illustrative example.)
+
+	Figure 6.10 on page 352 illustrates the general procedure for 
+obtaining the Nyquist diagram for the system whose characteristic 
+equation is given by Eq. 6.62 on page 351.
+
+	A representative Bode diagram (including phase margin and gain 
+margin) of a unity-feedback control system whose forward transfer 
+function is given by Eq. 6.99 (page 375) is shown in Fig. 6.31 (page 
+376).
+
+	The Nichols chart is applied to analyze the stability of the control 
+system shown in Figure 6.49 (page 402), and the resulting Nichols chart 
+is illustrated in Fig. 6.51(a) (page 404).  Additionally, the closed loop 
+frequency response is obtained from this Nichols chart, and it is 
+illustrated in Fig. 6.51(b) on page 404.
+
+	The construction of the root locus for negative-feedback control 
+systems is developed in Section 6.14 on pages 409 - 431.  The root locus 
+of a representative control system containing a pure integrator and two 
+simple poles is illustrated in Fig. 6.57 (page 414).  Several MODERN 
+CONTROL SYSTEM THEORY AND DESIGN TOOLBOX functions are used to obtain 
+this root locus: a) The calculation of rule 4 (real axis part of the root 
+locus) is accommodated by the function rlaxis.  b) The calculation of 
+rule 7 (breakaway and break-in points) is accommodated by the function 
+rlpoba.  c) The calculation of rule 8 (root locus intersection with the 
+imaginary axis) is accommodated by the function rootangl.
+
+	The construction of the root locus for positive-feedback control 
+systems is developed in Section 6.16 on pages 434 - 437.
+
+	An interesting root locus example is illustrated in Figure 6.67 on 
+page 437 where the root locus for both negative and positive feedback are 
+illustrated on the same set of axes for a control system which has a pure 
+integrator, three simple poles, and one simple zero.
+
+	The very interesting Table 6.27 is shown on pages 457 - 459 where a 
+comparison is made of using the Nyquist diagram, Bode diagram, Nichols 
+chart, and root locus diagram to analyze the same twelve commonly used 
+transfer functions.
+
+	Guidelines for selecting the best stability method to use for 
+analyzing a particular linear control system are presented in Section 
+6.22 on pages 463 - 464.
+
+	Section 6.23 (pages 464 - 476) contains Illustrative Problems and 
+Solutions related to Chapter 6.	
+
+Chapter 7
+
+In Chapter 6, the only objective that we answered was to determine how 
+stable or unstable the system was.  We made no attempt to make the system 
+more stable if it were only marginally stable, or to make it stable if it 
+were unstable.  The application of the stability analysis techniques 
+presented in Chapter 6 to the design of linear systems is presented in 
+Chapter 7.  In addition to certain stability requirements, the systems 
+designed in Chapter 7 also have simultaneous accuracy requirements.  The 
+design in Chapter 7 includes the use of the Bode diagram, Nichols Chart, 
+and root-locus methods.  In addition, the concept of linear-state-
+variable feedback, controllability, and observability are presented.  
+Estimator design, and the combined compensator design using a controller 
+and an estimator are presented.    
+
+   The design of a control system containing a disturbance, U(s), is 
+illustrated in Figure 7.27 on page 536.  A gain of K = 9.55 is required 
+to limit the effect of a unit step disturbance so that the resulting 
+steady-state error is 0.1.  For stability design purposes, a minimum 
+phase margin of 20 degrees and a minimum gain margin of 6 dB are 
+required.  Figure 7.28 on page 537 shows the resulting Bode diagrams on 
+the same set of axes for the marginally-stable uncompensated and  stable 
+compensated systems.
+
+	Figure 7.37 on page 551 shows the compensated version of the Nichols 
+chart for the system shown originally in Figure 6.49, and whose Nichols 
+chart was originally shown in Figure 6.51(a).  A compensation network has 
+been added to the system so that the value of the maximum peaking in the 
+frequency domain is reduced from 6.758 dB in Figure 6.51(b) to 2.976 dB 
+in Figure 7.37.
+
+	Figure 7.39 on page 558 shows the compensation on the root locus 
+diagram for the system originally shown in Figure 6.57 on page 414. The 
+compensated system achieves a velocity constant of 30/sec in addition to 
+a damping factor of 0.707.
+
+	Extensive tradeoff considerations for using various cascade-
+compensation methods (phase-lag, phase-lead, and phase-lag-lead networks) 
+and the use of minor-loop feedback are contained in Table 7.2 on pages 
+568 and 569.
+
+Chapter 8
+
+	Chapter 8 presents the major techniques used in modern control 
+system design. These include state-space, pole placement, Ackermann's 
+formula, estimation, robust control, and HÑ techniques. These are very 
+powerful methods for designing control systems
+
+	Figure 8.8 on page 600 illustrates an example of a linear-state-
+variable feedback system containing a controller and a process.  An 
+estimator system using linear-state-variable feedback is illustrated in 
+Figure 7.46 on page 469.  
+
+	After introducing Controllability in Section 8.4 on pages 605 - 608, 
+and Observability in Section 8.5 on pages 609 - 611, Ackermann's formula 
+for design using pole placement is presented in Section 8.6 starting on 
+page 611. Ackermann's technique is very useful for control systems which 
+require feedback from state variables which are not phase variables, that 
+is, where each subsequent state variable is defined as the derivative of 
+the previous state variable. Ackermann's method simplifies this problem 
+by transforming the control system to phase variables, determining the 
+feedback gains, and transforming the designed control system to its 
+original state-variable representation. This approach is applied to the 
+control system illustrated in Figure 8.16 on page 614. 
+
+	A combined compensator design including a controller and an 
+estimator is illustrated in Figure 8.19 on page 621. 
+
+	Robust control systems are introduced in Section 8.10 starting on 
+page 630. Robust control systems are concerned with determining a 
+stabilizing controller that achieves feedback performance in terms of 
+stability and accuracy requirements, but the control must achieve the 
+performance that is robust (insensitive) to plant uncertainty, parameter 
+variation, and external disturbances. A design example is illustrated for 
+the system shown in Figure 8.23 on page 631. 
+
+	The important modern approach to control system design using HÑ 
+concepts is presented in Sections 8.11 and 8.12 starting on page 636. 
+This approach combines both the frequency- and time-domain approaches to 
+provide a unified answer. The presentation expands the concepts of 
+robustness (introduced in Section 8.10) and sensitivity (introduced in 
+Chapter 5), together with the frequency and state-variable domain 
+techniques to introduce the HÑ concepts and apply it to some design 
+problems.
+
+Answers to Selected Problems
+
+	Answers to approximately one third of the problems in the book are 
+contained in the Answers to Selected Problem Section in the back of the 
+book on pages 815 - 841.  Detailed solutions to the remaining problems 
+are available from the MODERN CONTROL SYSTEM THEORY AND DESIGN TOOLBOX.
+ 
+
+
+
+ 
+
+ 
+
+
+
+
+
+

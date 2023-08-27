@@ -1,0 +1,11 @@
+num = [1 1];
+den = [conv([1 2],[1 4]) 0 0];
+[kmax,smax] = rootangl(num,den,90);
+r = rlocus(num,den,sort([0 kmax' logspace(-2,3)]));
+axis([-6 2 -4 4]); plot(r,'-'); grid; axis; axis([-6 2 -4 4]);
+xlabel('Real'); ylabel('Imaginary');
+hold on; plot(roots(num)+eps*sqrt(-1),'o'); hold off;
+hold on; plot(roots(den)+eps*sqrt(-1),'x'); hold off;
+hold on; plot([smax conj(smax)],'*'); hold off;
+text(0,imag(smax),[' Kmax = ' num2str(kmax)]);
+text(0,-imag(smax),[' Smax = ' num2str(-imag(smax)) 'j']);
