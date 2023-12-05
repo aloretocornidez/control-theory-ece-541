@@ -1,8 +1,6 @@
 # 541 Focused Literature Report
 
-Name: Alan Manuel Loreto Cornídez
-
-Date Due: December 6th
+Name: Alan Manuel Loreto Cornídez Date Due: December 6th
 
 Instructor: Dr. Hal Tharp
 
@@ -60,22 +58,123 @@ The solution rendered by their method only workds if the cost for that solution
 has a quadratic form. If this is not the case, the authors state that the
 optimal solution is suggested to be in the vicinity of the calculated soluton.
 
-### Formulas for Data-Driven Control: Stabilization, Optimzality, and Robustnes
+### Formulas for Data-Driven Control: Stabilization, Optimizality, and Robustness
+
+Paper 2 was written by Claudio De Persis and Pietro Tesi. This paper presents a
+derivation of a parameterization of linear systems that allows the control
+engineer to control a system without the need for knowledge of the plant's
+system matrix elements. The paper mentions that they apply their
+parameterization method to control problems where they solve the state and
+output feedback stabilization, and the linear quaratic regulation problem. They
+also metnion how hte controller they derive is robust to noise. In addition,
+they also say that their current theory can be used to stabilize equilibria of
+nonlinear systems.
+
+The paper very briefly mentions many of the resources that they have in their
+literature review. They state that data-driven methods, rather than system
+identification methods, range from adaptive control, neural networks theories,
+unfalsified control theory, iterative feeedback tuning, and virtual reference
+feedback tuning. They mention the implementation of many control techniques such
+as PID like control, model reference and output ptracking, predictive, robust,
+and optimal control, where optimal control is the most mentioned in the
+research.
+
+This paper presents three concepts that I haven't really heard of in my
+experience learning control theory. The first is the use of a Linear Matrix
+Inequality, which the athors refer to as simple. The second is the use of linear
+quadratic regulators as one of the problems that their method can solve.
+
+One of the points they stress in their conclusion is that their theory lays down
+the groundwork to allow engineers to systematically control systems with
+parameterization of the system is difficult. They explicitly mention non-linear
+systems and switched systems.
+
+One of the interesting topics contained in this paper is the the remark on
+multiple-input, multiple-output (MIMO) systems. They mention single-input,
+single-output systems as well and mention that their method was derived using
+SISO systems. However, they very quickly mention that their thery can also apply
+to MIMO systems.
+
+Some of the terms that the writers mention in regards to non lienar systems are
+the domain of attraction of a system as well lifting techniques for control of a
+non-linear system. They mention that both of these topics are compelling
+research directions for non-linear control theory.
 
 ### Nonlinear Feedback Design for Fixed-Time Stabilization of Linear Control Systems
+
+The final paper that I chose was written by a single author, Andrey Polyakov.
+This topic was interesting to me because of the unorthodox sounding title. Most
+of the time, if there is non-linearity in a control problem, it is the system,
+which must be controlled. However, in this case, the systems that the author was
+solving were linear. In contrast, the feedback used to control the system was
+not linear.
+
+The paper starts off by mentioning that many of the control methods are made for
+linear plants. The author then explains how linear control methods involve the
+use of polynomial feedback patterns that rely on stabilizing a play via the use
+of finite convergence time for a system into the region specified by the input.
+The author then shifts attention to a second kind of control that implements a
+'sliding mode control algorithm'. They state that this method allows the system
+to have a set settling time independent of initial conditions of the system.
+
+This paper also mentions that the theory presented works for both single-input
+single-output systems in addition to multiple-input multiple-output systems.
+Similar to the other two papers, this paper mentions that this control theory is
+robust, at least in regards to when the matching condition holds.
+
+It is immeadiately noticable that this paper is shorter than the other two
+papers. In fact, this paper does not even have a conclusion section. I was also
+slightly, though, not by much, more familiar with the terms that were being used
+in this text. This is likely because this paper focused on linear systems with
+non-linear controllers instead of non-linear systems themselves.
 
 ## Possible Questions
 
 1. Is there a gap between the contents in your papers and the material in ECE
    541a?
 
+   - There was most definitely a gap in the knowledge that I have about control
+     theory and the knowledge that is present in these papers. Not only was I
+     completely dumbfounded by all of the linear algebra that was contained in
+     each paper, I was also barely ablt to conceptually understand the concepts
+     that were being discussed. On the bright side, I was able to piece together
+     the main points that were being made about how each piece of theory they
+     presented is helpful to their respective fields.
+
 2. Was there any similarity with how the papers were organized?
+
+   - Each of the papers had an abstract, intro, and some had mini literature
+     reviews. After that, they each went into mathematical proofs for their
+     theroems and then had examples where their theory would apply. I could see
+     these topics being presented as a highly specialized guest lecture in one
+     of our classes.
 
 3. Did the papers share any common references? Authors?
 
 4. What research questions were addressed in the papers?
 
+   - Each of the papers addressed robustness of their control theory. I think
+     this is something worthy of note because, while our mathematical equations
+     can equal anything with enough assumptions. At the end of the day, we are
+     still engineers that must apply the knowledge in the theory that we think
+     to the real world. This means that noise ridden signals must still be
+     enough to control a system. So, even from a non-technical perspective,
+     anyone can understand that the robustness of a controller is a critical
+     consideration to make when designing a control theory method.
+
 5. Which paper did you like? Why?
+
+   - I liked the second paper the most, 'Data-Driven Control Stabilization
+     Optimality and Control' the most because, while it was very technical, I
+     was still able to gather many of the pieces. I think one of the most
+     critical things that I picked up while reading this paper was the different
+     approaches that exist for controlling a system. Specifically, the
+     data-driven approach vs the system identification approach. We learned how
+     to identify systems by assuming a system was second order and then looking
+     at the impulse/step response. However, many realistic systems (and
+     technically, all to an extent) are not time-invariant or linear. This means
+     that using the data-driven approach to controlling a system is a valuable
+     research topic to aid engineers in controlling arbitrary systems.
 
 6. What questions arise from comparing and contrasting the papers?
 
@@ -85,6 +184,12 @@ optimal solution is suggested to be in the vicinity of the calculated soluton.
 8. Have these questions already been asked and answered by others, since the
    publication of your selected papers?
 
+   - There's a pretty cool article,
+     [The Informativity Approach: To Data-Driven Analysis and Control](https://ieeexplore.ieee.org/document/10317631),
+     that is basically a compilation of the topics that are mentioned in this
+     paper among others, that basically states that this research is great
+     foundational work for future research.
+
 9. Did this project identify other papers that you would read and study to
    further your research or inspire a new research direction?
 
@@ -92,12 +197,29 @@ optimal solution is suggested to be in the vicinity of the calculated soluton.
 
 11. What did you not like about any of the papers you selected?
 
+    - A lot of them suffer from the same problem that many technical papers do,
+      they are very quick to thow many terms that coul dbe considered jargon by
+      non-engineers, and even other engineers. Especially at the early
+      graduate/undergraduate level. The paper that best explained things in an
+      undersandable way was paper 2. However, I was a bit more comfortabl
+      ereading paper 3 becuase of the fact that I already understand linear
+      systems more than I understand non-linear systems. All of them mention
+      MIMO systems, but non of them explain them. Granted, with any paper
+      submitted to a journal like IEEE, you are expected to be an expert in the
+      field already.
+
 12. Did you feel some of the material in any of your papers was unclear or
     confusing?
+
+    - Refer to all other questions.
 
 13. Do you think the authors missed anything?
 
 14. Have there been any corrections to any of the papers?
+
+    - Yes, there have been revisions on some of the papers. Paper 2 had a
+      revision from Feb 2020, after the initial manuscript submission from March
+      2019 and publication form December 2019.
 
 15. Did their analysis and methodology seem justified?
 
